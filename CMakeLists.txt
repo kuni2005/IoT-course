@@ -10,4 +10,6 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 
 #define the executable target
 add_executable(cpp_oop_review main.cpp
-        src/Resource.cpp)
+        src/Resource.cpp
+        src/Executable.cpp
+        src/UsableResource.cpp)

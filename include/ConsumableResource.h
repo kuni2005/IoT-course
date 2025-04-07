@@ -1,7 +1,7 @@
 
 #ifndef CONSUMABLERESOURCE_H
-#define CONSUMABLERESOURCE_H
-#include <string>
+#define CONSUMABLE_RESOURCE_H
+
 #include "Resource.h"
 
 class ConsumableResource final : public Resource {
@@ -11,10 +11,10 @@ class ConsumableResource final : public Resource {
 
    public:
      ConsumableResource(const std::string& name, int capacity);
-     bool isAvailableForUse() const override;
+    [[nodiscard]] bool isAvailableForUse() const override;
      void allocate() override;
      void release() override;
-     void use()  override;
-     int getRemainingCapacity() const;
+     void use() const override;
+    [[nodiscard]] int getRemainingCapacity() const;
 };
 #endif //CONSUMABLERESOURCE_H

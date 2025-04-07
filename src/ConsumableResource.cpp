@@ -24,7 +24,7 @@ void ConsumableResource::allocate() {
 
 }
 
-void ConsumableResource::use() {
+void ConsumableResource:: use() const{
     std::cout << "Using consumable resource " << getName() << std::endl;
 }
 

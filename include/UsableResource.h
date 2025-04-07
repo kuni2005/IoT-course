@@ -1,6 +1,6 @@
 
 #ifndef USABLERESOURCE_H
-#define USABLERESOURCE_H
+#define USABLE_RESOURCE_H
 #include <string>
 #include "Resource.h"
 class UsableResource final : public Resource{
@@ -9,10 +9,10 @@ class UsableResource final : public Resource{
 
  public:
    UsableResource(const std::string& name, int capacity);
-   bool isAvailableForUse() const override;
+   [[nodiscard]] bool isAvailableForUse() const override;
    void allocate() override;
    void release() override;
-   void use() override;
+   void use() const override;
 };
 
 #endif //USABLERESOURCE_H

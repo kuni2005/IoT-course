@@ -14,7 +14,7 @@ class ConsumableResource final : public Resource {
      bool isAvailableForUse() const override;
      void allocate() override;
      void release() override;
-     void use() override;
+     void use()  override;
      int getRemainingCapacity() const;
 };
 #endif //CONSUMABLERESOURCE_H
